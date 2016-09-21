@@ -58,6 +58,7 @@ CLIENT_BDM2_KEYS = {
     'bootindex': 'boot_index',
     'type': 'device_type',
     'shutdown': 'delete_on_termination',
+    'volumetype': 'volume_type',
 }
 
 
@@ -437,6 +438,8 @@ def _boot(cs, args):
            "depending on selected bus), "
            "size=size of the block device in GB (if omitted, "
            "hypervisor driver calculates size), "
+           "volumetype=volume type (e.g. ssd, hdd, ...; if omitted, "
+           "cinder's default type will be used) "
            "format=device will be formatted (e.g. swap, ntfs, ...; optional), "
            "bootindex=integer used for ordering the boot disks "
            "(for image backed instances it is equal to 0, "
